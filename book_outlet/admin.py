@@ -9,6 +9,14 @@ class BookAdmin(admin.ModelAdmin):
     list_filter = ("title","rating",)
     list_display = ("title","author",)
 
+# class BookInline(admin.TabularInline):
+#     model = Book
+
+# class CountryAdmin(admin.ModelAdmin):
+#     inlines = [
+#         BookInline,
+#     ]
+
 admin.site.register(Book,BookAdmin)
 admin.site.register(Author)
 admin.site.register(Address)
